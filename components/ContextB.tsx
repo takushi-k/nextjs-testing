@@ -1,4 +1,4 @@
-import { useStateContext } from '../context/StateProvider'
+import { useStateContext } from '../context/stateProvider'
 
 const ContextB: React.FC = () => {
   const { toggle } = useStateContext()
