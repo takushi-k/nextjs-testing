@@ -36,6 +36,7 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
             </li>
           ))}
       </ul>
+      <p>aaaaaaaaaaaaaaaaa</p>
     </Layout>
   )
 }
