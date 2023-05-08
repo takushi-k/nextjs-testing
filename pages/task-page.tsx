@@ -24,8 +24,8 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
   })
   if (error) return <span>Error!</span>
   return (
-    <Layout title="Todos">
-      <p className="mb-10 text-4xl">todos page22222222</p>
+    <Layout title="Todos22222">
+      <p className="mb-10 text-4xl">todos page</p>
       <ul>
         {tasks &&
           tasks.map((task) => (
