@@ -22,10 +22,10 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
     fallbackData: staticTasks,
     revalidateOnMount: true,
   })
-  if (error) return <span>Error!</span>
+  if (error) return <span>Error!222222222</span>
   return (
     <Layout title="Todos">
-      <p className="mb-10 text-4xl">todos page</p>
+      <p className="mb-10 text-4xl">todos page22222222</p>
       <ul>
         {tasks &&
           tasks.map((task) => (
