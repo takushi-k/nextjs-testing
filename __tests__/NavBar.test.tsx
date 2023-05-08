@@ -23,10 +23,13 @@ describe('Navigation by Link', () => {
 
     userEvent.click(screen.getByTestId('comment-nav'))
     expect(await screen.findByText('comment page')).toBeInTheDocument()
+
     userEvent.click(screen.getByTestId('context-nav'))
     expect(await screen.findByText('context page')).toBeInTheDocument()
+
     userEvent.click(screen.getByTestId('task-nav'))
     expect(await screen.findByText('todos page')).toBeInTheDocument()
+
     userEvent.click(screen.getByTestId('home-nav'))
     expect(await screen.findByText('Welcome to Nextjs')).toBeInTheDocument()
   })

@@ -4,6 +4,6 @@ import Home from '../pages/index'
 
 it('Should render hello text', () => {
   render(<Home />)
-  // screen.debug()
+  screen.debug()
   expect(screen.getByText('Welcome to Nextjs')).toBeInTheDocument()
 })

@@ -4,13 +4,16 @@ export const getAllPostsData = async () => {
   const res = await fetch(
     new URL('https://jsonplaceholder.typicode.com/posts/?_limit=10')
   )
+  console.log('fetch完了')
+  console.log(res)
   const posts = await res.json()
+  console.log(posts)
   return posts
 }
 
 export const getAllTasksData = async () => {
   const res = await fetch(
-    new URL('https://jsonplaceholder.typicode.com/todos/?_limit=10')
+    new URL('https://jsonplaceholder.typicode.com/todos/?_limit=5')
   )
   const tasks = await res.json()
   return tasks

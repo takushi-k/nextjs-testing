@@ -9,6 +9,9 @@ interface STATICPROPS {
 }
 
 const BlogPage: React.FC<STATICPROPS> = ({ posts }) => {
+  console.log('BlogPage called!!!!!!!')
+  console.log(posts)
+
   return (
     <Layout title="Blog">
       <p className="text-4xl mb-10">blog page</p>
@@ -20,6 +23,7 @@ const BlogPage: React.FC<STATICPROPS> = ({ posts }) => {
 export default BlogPage
 
 export const getStaticProps: GetStaticProps = async () => {
+  console.log('BlogPage getStaticProps')
   const posts = await getAllPostsData()
 
   return {

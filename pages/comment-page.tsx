@@ -5,14 +5,19 @@ import Comment from '../components/Comment'
 import { COMMENT } from '../types/Types'
 
 const axiosFetcher = async () => {
+  console.log('1111111111111111111111111')
   const result = await axios.get<COMMENT[]>(
     'https://jsonplaceholder.typicode.com/comments/?_limit=10'
   )
+  console.log('2222222222222222222222222')
+  console.log(result.data)
   return result.data
 }
 
 const CommentPage: React.FC = () => {
   const { data: comments, error } = useSWR('commentsFetch', axiosFetcher)
+  // console.log({ comments })
+  // console.log({ error })
 
   if (error) return <span>Error!</span>
 

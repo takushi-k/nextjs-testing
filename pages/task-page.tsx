@@ -10,6 +10,7 @@ interface STATICPROPS {
 }
 
 const axiosFetcher = async () => {
+  console.log('axiosFetcher !!!!!!!!!!!!!!!!!')
   const result = await axios.get<TASK[]>(
     'https://jsonplaceholder.typicode.com/todos/?_limit=10'
   )
@@ -41,7 +42,9 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
 export default TaskPage
 
 export const getStaticProps: GetStaticProps = async () => {
+  console.log('getStaticProps !!!!!!!!!!')
   const staticTasks = await getAllTasksData()
+  console.log(staticTasks)
   return {
     props: { staticTasks },
   }

@@ -5,6 +5,11 @@ import { POST } from '../../types/Types'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 const PostDetail: React.FC<POST> = ({ id, title, body }) => {
+  console.log('PostDetail called!!!!!!')
+  console.log(id)
+  console.log(title)
+  console.log(body)
+
   return (
     <Layout title={title}>
       <p className="m-4">
@@ -38,6 +43,7 @@ const PostDetail: React.FC<POST> = ({ id, title, body }) => {
 export default PostDetail
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  console.log('PostDetail getStaticPaths!!!!!!')
   const paths = await getAllPostIds()
   return {
     paths,
@@ -46,6 +52,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
+  console.log('PostDetail getStaticProps!!!!!!: ' + ctx.params.id)
   //const { post: post } = await getPostData(ctx.params.id as string)
   const post = await getPostData(ctx.params.id as string)
   return {

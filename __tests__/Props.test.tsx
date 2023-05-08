@@ -21,6 +21,6 @@ describe('Post component with given props', () => {
     render(<Post {...dummyProps} />)
     expect(screen.getByText(dummyProps.id)).toBeInTheDocument()
     expect(screen.getByText(dummyProps.title)).toBeInTheDocument()
-    //screen.debug()
+    screen.debug()
   })
 })
